@@ -1,6 +1,6 @@
- # Intern Dashboard
+ # 🌐 Intern Dashboard
 
-A full-stack web application that allows interns to register, log in, and view their dashboard, including referral codes, donation amounts, and rewards.
+A full-stack web application that allows interns to **register**, **log in**, and view their **personal dashboard**, including referral codes, donation amounts, and static rewards.
 
 ## 🚀 Live Demo
 
@@ -10,28 +10,18 @@ A full-stack web application that allows interns to register, log in, and view t
 
 ## 📦 Features
 
-- Intern registration and login
-- Dashboard showing:
-  - Intern's name
-  - Referral code
-  - Donation amount
-  - Static rewards
-- Stylish UI with CSS (no Bootstrap)
-- Fully responsive
-- Animations for better UX
-- Secure using `.env` and sessions
-- MongoDB Atlas for database
+- 🔐 Intern Registration & Login (session-based auth)
+- 📋 Dashboard Includes:
+  - ✅ Intern Name
+  - 📇 Referral Code
+  - 💰 Donation Amount
+  - 🏆 Static Rewards
+- 💅 Stylish, responsive UI (no Bootstrap)
+- 🎨 CSS Animations for smooth experience
+- 📂 Folder structure separation for better management
+- 🛡️ Secure `.env` usage & MongoDB Atlas connection
 
 ---
 
 ## 📁 Project Structure
 
-intern-dashboard/
-├── backend/
-│ ├── models/
-│ ├── routes/
-│ ├── views/
-│ ├── public/
-│ ├── app.js
-│ ├── package.json
-│ └── .env (ignored)
