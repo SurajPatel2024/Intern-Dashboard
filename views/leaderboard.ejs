@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Leaderboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- External CSS -->
+  <link rel="stylesheet" href="/styles.css" />
+
+  <!-- Font Awesome CDN for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+<style>
+    /* Leaderboard Styles */
+.leaderboard {
+  max-width: 600px;
+  margin: 60px auto;
+  padding: 30px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease-in-out;
+}
+
+.leaderboard h2 {
+  font-size: 28px;
+  text-align: center;
+  color: #333;
+  margin-bottom: 25px;
+}
+
+.leaderboard-list {
+  list-style: none;
+  padding: 0;
+}
+
+.leaderboard-list li {
+  padding: 10px 15px;
+  margin: 8px 0;
+  background: #f1f1f1;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 18px;
+  transition: transform 0.2s;
+}
+
+.leaderboard-list li:hover {
+  transform: scale(1.02);
+  background: #e2e8f0;
+}
+
+.rank-icon i {
+  font-size: 20px;
+}
+
+.gold {
+  color: #FFD700;
+}
+.silver {
+  color: #C0C0C0;
+}
+.bronze {
+  color: #CD7F32;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 25px;
+  text-decoration: none;
+  color: #007BFF;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.back-link:hover {
+  color: #0056b3;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+</style>
+  <!-- Include Navbar -->
+  <%- include('partials/header') %>
+
+  <!-- Leaderboard Section -->
+  <div class="container leaderboard">
+    <h2><i class="fas fa-trophy"></i> Leaderboard</h2>
+    <ol class="leaderboard-list">
+      <% users.forEach((user, index) => { %>
+        <li>
+          <span class="rank-icon">
+            <% if (index === 0) { %><i class="fas fa-crown gold"></i>
+            <% } else if (index === 1) { %><i class="fas fa-medal silver"></i>
+            <% } else if (index === 2) { %><i class="fas fa-medal bronze"></i>
+            <% } else { %><i class="fas fa-user"></i>
+            <% } %>
+          </span>
+          <strong><%= user.username %></strong> – ₹<%= user.donationsRaised %>
+        </li>
+      <% }) %>
+    </ol>
+    <a href="/dashboard" class="back-link"><i class="fas fa-arrow-left"></i> Back to Dashboard</a>
+  </div>
+
+  <!-- Include Footer -->
+  <%- include('partials/footer') %>
+</body>
+</html>

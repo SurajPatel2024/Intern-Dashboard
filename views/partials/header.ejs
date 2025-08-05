@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+ <title>Intern Dashboard</title>
+ 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/styles.css" />
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+</head>
+<body>
+    <style>
+        .nav-links a {
+  text-decoration: none;
+  color: #fff;
+  padding: 0.8rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ffd700;
+  transform: scale(1.05);
+}
+
+.feature-card i {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #007bff;
+}
+
+    </style>
+  <nav class="navbar">
+     <div class="logo">Intern Dashboard</div>
+     <div class="nav-links">
+  <% if (user) { %>
+    <a href="/dashboard"><i class="fas fa-home"></i> Dashboard</a> 
+    <a href="/leaderboard"><i class="fas fa-trophy"></i> Leaderboard</a> 
+    <a href="/logout"><i class="fas fa-sign-out-alt"></i> Logout</a> 
+  <% } else { %>
+    <a href="/login"><i class="fas fa-sign-in-alt"></i> Login</a> 
+    <a href="/register"><i class="fas fa-user-plus"></i> Register</a> 
+  <% } %>
+</div>
+
+  </nav>
+  <main class="main-content">

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <link href="/styles.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <%- include('partials/header') %>
+
+  <div class="dashboard-container">
+    <div class="dashboard-card">
+      <h2>Hello, <%= user.username %>!</h2>
+      <div class="info">
+        <p><strong>Referral Code:</strong> <span class="highlight"><%= user.referralCode %></span></p>
+        <p><strong>Total Donations Raised:</strong> <span class="highlight">₹<%= user.donationsRaised %></span></p>
+      </div>
+
+      <h3>🎁 Rewards</h3>
+      <ul class="rewards">
+        <% user.rewards.forEach(r => { %>
+          <li><i class="fas fa-check-circle"></i> <%= r %></li>
+        <% }) %>
+      </ul>
+
+      <div class="dashboard-links">
+        <a class="btn-link" href="/leaderboard"><i class="fas fa-trophy"></i> View Leaderboard</a>
+        <a class="btn-link logout" href="/logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
+      </div>
+    </div>
+  </div>
+
+  <%- include('partials/footer') %>
+</body>
+</html>

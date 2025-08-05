@@ -1,0 +1,320 @@
+/* ========== General Reset ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ========== Base Styling ========== */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #e3f2fd, #fffde7);
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ========== Header & Footer ========== */
+header, footer {
+  background-color: #00897b;
+  color: white;
+  padding: 1rem 2rem;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 1.8rem;
+}
+
+footer {
+  font-size: 14px;
+  margin-top: 50px;
+}
+
+footer .footer-links {
+  margin-bottom: 10px;
+}
+
+footer .footer-links a {
+  color: #bbdefb;
+  margin: 0 12px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+footer .footer-links a:hover {
+  color: #fff176;
+}
+
+footer p {
+  margin: 5px 0 0;
+  opacity: 0.8;
+}
+
+/* ========== Navbar ========== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: linear-gradient(90deg, #4b6cb7, #182848);
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  animation: slideDown 0.5s ease-in-out;
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar .nav-links a {
+  color: white;
+  text-decoration: none;
+  margin-left: 1.5rem;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.navbar .nav-links a:hover {
+  color: #ffc107;
+}
+
+/* Footer */
+.footer {
+  background: linear-gradient(90deg, #182848, #4b6cb7);
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 3rem;
+  animation: slideUp 0.5s ease-in-out;
+}
+
+.footer .social-icons {
+  margin-top: 0.5rem;
+}
+
+.footer .social-icons a {
+  color: white;
+  margin: 0 0.5rem;
+  font-size: 1.2rem;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.footer .social-icons a:hover {
+  color: #ffc107;
+  transform: scale(1.2);
+}
+
+ 
+/* ========== Container for Forms ========== */
+.container {
+  width: 100%;
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.container h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #00695c;
+}
+
+.container p {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.container a {
+  color: #00897b;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.container a:hover {
+  color: #004d40;
+  text-decoration: underline;
+}
+
+/* ========== Form Inputs ========== */
+form input {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: 0.3s ease;
+}
+
+form input:focus {
+  border-color: #00897b;
+  outline: none;
+  background-color: #e0f2f1;
+}
+
+/* ========== Form Button ========== */
+form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #00897b;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+form button:hover {
+  background-color: #00695c;
+}
+
+/* ========== Flash Messages ========== */
+.error {
+ 
+  color: #c62828;
+  font-weight: 600;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.success {
+  
+  color: #2e7d32;
+  font-weight: 600;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* ========== Dashboard Cards ========== */
+.dashboard-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 60px 20px;
+  min-height: 80vh;
+}
+
+.dashboard-card {
+  background: #fff;
+  padding: 30px 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 100%;
+  animation: fadeIn 1s ease;
+}
+
+.dashboard-card h2 {
+  margin-bottom: 10px;
+  color: #1976d2;
+}
+
+.dashboard-card h3 {
+  margin-top: 30px;
+  color: #388e3c;
+}
+
+.info p {
+  font-size: 18px;
+  margin: 8px 0;
+}
+
+.highlight {
+  color: #e65100;
+  font-weight: bold;
+}
+
+/* Rewards List */
+.rewards {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.rewards li {
+  padding: 8px 0;
+  color: #4caf50;
+  font-weight: 500;
+  transition: transform 0.3s ease;
+}
+
+.rewards li:hover {
+  transform: translateX(5px);
+}
+
+/* Dashboard Links */
+.dashboard-links {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+}
+
+.btn-link {
+  text-decoration: none;
+  background: #1976d2;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 8px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.btn-link:hover {
+  background: #0d47a1;
+  transform: translateY(-2px);
+}
+
+.btn-link.logout {
+  background: #d32f2f;
+}
+
+.btn-link.logout:hover {
+  background: #b71c1c;
+}
+
+/* ========== Animations ========== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 768px) {
+  .dashboard-card {
+    padding: 20px;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav .nav-links {
+    margin-top: 10px;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  footer .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+}
