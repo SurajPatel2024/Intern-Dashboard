@@ -25,3 +25,12 @@ A full-stack web application that allows interns to **register**, **log in**, an
 
 ## 📁 Project Structure
 
+intern-dashboard/
+├── backend/
+│ ├── models/ # Mongoose models
+│ ├── routes/ # Express routes
+│ ├── views/ # EJS templates
+│ ├── public/ # Static files (CSS, JS, images)
+│ ├── app.js # Main server file
+│ ├── package.json # Backend dependencies
+│ └── .env # Environment variables (ignored in Git)
